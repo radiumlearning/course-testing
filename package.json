@@ -1,0 +1,46 @@
+{
+  "name": "react-native-testing-class",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "scripts": {
+    "bootstrap": "yarn && (cd packages/mobile/ios && pod install)",
+    "ios": "(cd packages/mobile && yarn ios)",
+    "web": "(cd packages/web && yarn start)",
+    "android": "(cd packages/mobile && yarn android)",
+    "test": "TZ=UTC jest",
+    "test-c": "yarn jest --ci --colors --runInBand --reporters=default --reporters=jest-junit --coverage"
+  },
+  "author": "Matias Vazquez <matias.vazquez.93@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/plugin-proposal-private-methods": "^7.16.5",
+    "@babel/preset-react": "^7.16.5",
+    "@radium/core.config.eslint": "^0.0.1",
+    "@radium/core.uiweb.text": "^0.0.1",
+    "@testing-library/jest-dom": "^5.16.1",
+    "@types/jest": "^27.0.3",
+    "@typescript-eslint/eslint-plugin": "^5.10.1",
+    "@typescript-eslint/parser": "^5.10.1",
+    "eslint": "^8.7.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-import-resolver-typescript": "^2.5.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-standard": "^5.0.0",
+    "jest": "^27.4.5",
+    "metro-react-native-babel-preset": "^0.66.2",
+    "prettier": "^2.5.1",
+    "ts-jest": "^27.1.2",
+    "typescript": "^4.5.4"
+  }
+}
