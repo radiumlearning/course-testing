@@ -30,6 +30,23 @@ This repository holds the examples that will be used in all 3 RN Testing Lecture
 - Live practical examples of a component test with Redux
 - Sharing & explaining asynchronous material
 
+### Where to find the material
+
+- First, checkout to the corresponding branch for the class you are taking
+
+
+Class 1 (clase-1/exercises)
+- Navigate to `packages/lib/utils/exercises`
+
+
+Class 2 (clase-1/exercises)
+- TBD
+
+
+Class 3 (clase-1/exercises)
+- TBD
+
+
 ## Workflow
 
 Participants will have to fork this repo in order to publish their own asynchronous material solutions in the form of a PR, each class will have their own separate branches each already created. This is meant to be a way to keep track of each student's work and keep the repo tidy and reusable for future lectures.
