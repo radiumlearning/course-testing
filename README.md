@@ -33,6 +33,3 @@ This repository holds the examples that will be used in all 3 RN Testing Lecture
 ## Workflow
 
 Participants will have to fork this repo in order to publish their own asynchronous material solutions in the form of a PR, each class will have their own separate branches each already created. This is meant to be a way to keep track of each student's work and keep the repo tidy and reusable for future lectures.
-
-e.g.
-For the first lecture, a branch "first-class" should be created with the solutions for the asynchronous material.
