@@ -27,7 +27,7 @@
     "build": "react-app-rewired build",
     "eject": "react-scripts eject",
     "test": "TZ=UTC jest",
-    "test-c": "yarn jest --ci --colors --runInBand --reporters=default --reporters=jest-junit --coverage"
+    "test-c": "yarn jest --ci --colors --runInBand --reporters=default --reporters=jest-junit --coverage --verbose"
   },
   "browserslist": {
     "production": [

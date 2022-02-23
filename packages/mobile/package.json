@@ -7,7 +7,7 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "TZ=UTC jest",
-    "test-c": "yarn jest --ci --colors --runInBand --reporters=default --reporters=jest-junit --coverage"
+    "test-c": "yarn jest --ci --colors --runInBand --reporters=default --reporters=jest-junit --coverage --verbose"
   },
   "dependencies": {
     "@monorepo-template/lib": "*",

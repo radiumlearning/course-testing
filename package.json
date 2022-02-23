@@ -14,7 +14,7 @@
     "web": "(cd packages/web && yarn start)",
     "android": "(cd packages/mobile && yarn android)",
     "test": "TZ=UTC jest",
-    "test-c": "yarn jest --ci --colors --runInBand --reporters=default --reporters=jest-junit --coverage"
+    "test-c": "yarn jest --ci --colors --runInBand --reporters=default --reporters=jest-junit --coverage --verbose"
   },
   "author": "Matias Vazquez <matias.vazquez.93@gmail.com>",
   "license": "MIT",
