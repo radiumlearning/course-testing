@@ -16,7 +16,7 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-import {Button} from '@monorepo-template/lib/components/button';
+import {Button} from '@rn-testing-class/lib/components/button';
 import styles from './App.styles';
 
 const Section: React.FC<{
