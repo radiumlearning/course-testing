@@ -1,5 +1,5 @@
 import express from 'express';
-import {Product} from '@monorepo-template/lib/interfaces/product';
+import {Product} from '@rn-testing-class/lib/interfaces/product';
 
 const routes = express.Router();
 

@@ -1,5 +1,5 @@
 {
-  "name": "@monorepo-template/web",
+  "name": "@rn-testing-class/web",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -10,7 +10,7 @@
     "@types/node": "^16.11.17",
     "@types/react": "^17.0.38",
     "@types/react-dom": "^17.0.11",
-    "@monorepo-template/lib": "*",
+    "@rn-testing-class/lib": "*",
     "babel-plugin-import": "^1.13.3",
     "customize-cra": "^1.0.0",
     "jest-junit": "^13.0.0",

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button as LibButton} from '@monorepo-template/lib/components/button';
+import {Button as LibButton} from '@rn-testing-class/lib/components/button';
 
 import {Text} from '@radium/core.uiweb.text';
 
