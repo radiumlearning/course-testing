@@ -6,8 +6,8 @@ import {
   createAction,
 } from '@reduxjs/toolkit';
 
-import {throwMiddleware} from 'src/redux/middleware/throwMiddleware';
-import example from 'src/redux/modules/example/exampleReducers';
+import {throwMiddleware} from './middleware/throwMiddleware';
+import example from './modules/example/exampleReducers';
 
 export const resetStoreAction = createAction('auth/RESET_STORE');
 

@@ -1,5 +1,5 @@
 import {createSelector} from '@reduxjs/toolkit';
-import {RootState} from 'src/redux';
+import {RootState} from '../../../';
 
 const exampleDataSelector = (state: RootState) => state?.example?.data;
 

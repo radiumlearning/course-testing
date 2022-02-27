@@ -1,9 +1,9 @@
 import {createAsyncThunk} from '@reduxjs/toolkit';
 
 import {User} from '@rn-testing-class/lib/interfaces';
-import {AppDispatch, RootState} from 'src/redux';
-import {selectHasExample} from 'src/redux/selectors/selectHasExample';
-import * as API from 'src/redux/modules/example/api';
+import {AppDispatch, RootState} from '../../../';
+import {selectHasExample} from '../../../selectors/selectHasExample';
+import * as API from '../../../modules/example/api';
 
 export const fetchExampleAction = createAsyncThunk<
   User[],

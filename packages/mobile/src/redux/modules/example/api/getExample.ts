@@ -1,4 +1,4 @@
-import {get, APIPromise} from 'src/api';
+import {get, APIPromise} from '../../../../api';
 import {User} from '@rn-testing-class/lib/interfaces';
 
 export type GetExampleOutput = User[];
