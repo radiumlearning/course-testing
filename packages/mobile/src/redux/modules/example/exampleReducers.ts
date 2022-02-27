@@ -3,7 +3,7 @@ import {createReducer} from '@reduxjs/toolkit';
 
 import {User} from '@rn-testing-class/lib/interfaces';
 
-import {fetchExampleAction} from './actions/fetchExample';
+import {fetchExampleAction} from './actions';
 
 export default combineReducers({
   data: createReducer<User[]>([], builder => {
@@ -17,7 +17,7 @@ export default combineReducers({
       .addCase(fetchExampleAction.pending, () => '')
       .addCase(
         fetchExampleAction.rejected,
-        (_, action) => action.error.message || 'Error loading examples',
+        (_, action) => action.error.message || 'Error loading example',
       );
   }),
   isFetching: createReducer(false, builder => {
