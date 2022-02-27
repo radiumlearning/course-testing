@@ -6,6 +6,7 @@ import {
   createAction,
 } from '@reduxjs/toolkit';
 
+import {throwMiddleware} from 'src/redux/middleware/throwMiddleware';
 import example from 'src/redux/modules/example/exampleReducers';
 
 export const resetStoreAction = createAction('auth/RESET_STORE');
@@ -25,11 +26,11 @@ export const rtkConfig = {
       : rootReducer(state, action)) as typeof rootReducer,
 };
 
-export const getStore = (services: any) =>
+export const getStore = () =>
   configureStore({
     ...rtkConfig,
     middleware: getDefaultMiddleware =>
-      getDefaultMiddleware({thunk: {extraArgument: services}}),
+      getDefaultMiddleware().concat([throwMiddleware]),
   });
 
 /**

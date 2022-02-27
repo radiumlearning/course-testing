@@ -12,7 +12,7 @@ import {Provider} from 'react-redux';
 import {NavigationContext, NavigationProp} from '@react-navigation/native';
 
 import {RootState} from 'src/redux';
-import {getMockStore} from './test-utils';
+import {getMockStore} from './utils';
 
 type Opts = RenderOptions & {
   initialState?: RootState;
