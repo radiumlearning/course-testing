@@ -1,23 +1,23 @@
 import {createAsyncThunk} from '@reduxjs/toolkit';
 
 import {User} from '@rn-testing-class/lib/interfaces';
-import {AppDispatch, RootState} from '../../../';
-import {selectHasExample} from '../../../selectors/selectHasExample';
-import * as API from '../../../modules/example/api';
+import {AppDispatch, RootState} from '../../..';
+import {selectHasUsers} from '../../../selectors/selectHasUsers';
+import * as API from '../api';
 
-export const fetchExampleAction = createAsyncThunk<
+export const fetchUsersAction = createAsyncThunk<
   User[],
   undefined,
   {state: RootState; dispatch: AppDispatch}
 >(
-  'example/FETCH_EXAMPLE',
+  'users/FETCH_USERS',
   async () => {
     const res = await API.getExample();
     return res.data;
   },
   {
     condition: (_, {getState}) => {
-      if (selectHasExample(getState())) return false;
+      if (selectHasUsers(getState())) return false;
     },
   },
 );

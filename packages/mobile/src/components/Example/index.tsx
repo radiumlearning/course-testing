@@ -3,15 +3,15 @@ import {SafeAreaView, Text, useColorScheme} from 'react-native';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 import {useDispatch, useSelector} from 'react-redux';
 
-import {fetchExampleAction} from '../../redux/modules/example/actions';
+import {fetchUsersAction} from '../../redux/modules/users/actions';
 
 const Example = () => {
   const dispatch = useDispatch();
-  const data = useSelector(state => state.example.data);
-  const isFetching = useSelector(state => state.example.isFetching);
+  const data = useSelector(state => state.user.data);
+  const isFetching = useSelector(state => state.user.isFetching);
 
   React.useEffect(() => {
-    dispatch(fetchExampleAction());
+    dispatch(fetchUsersAction());
   });
   const isDarkMode = useColorScheme() === 'dark';
 

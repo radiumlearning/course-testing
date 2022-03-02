@@ -7,12 +7,12 @@ import {
 } from '@reduxjs/toolkit';
 
 import {throwMiddleware} from './middleware/throwMiddleware';
-import example from './modules/example/exampleReducers';
+import user from './modules/users/usersReducers';
 
 export const resetStoreAction = createAction('auth/RESET_STORE');
 
 export const rootReducer = combineReducers({
-  example,
+  user,
 });
 
 export const rtkConfig = {

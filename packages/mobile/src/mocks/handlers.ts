@@ -40,6 +40,10 @@ export const handlers = [
     res(ctx.status(200), ctx.json(Mocks.users)),
   ),
 
+  rest.get(`${BASE_API_URL}/users/:userId`, (_, res, ctx) =>
+    res(ctx.status(200), ctx.json(Mocks.user)),
+  ),
+
   // POST example
   rest.post(`${BASE_API_URL}/users`, (_, res, ctx) =>
     res(ctx.status(200), ctx.json(Mocks.user)),
