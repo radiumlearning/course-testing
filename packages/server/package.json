@@ -1,5 +1,5 @@
 {
-  "name": "@monorepo-template/server",
+  "name": "@rn-testing-class/server",
   "version": "1.0.0",
   "main": "src/index.ts",
   "license": "MIT",
@@ -9,7 +9,7 @@
     "test-c": "yarn jest --ci --colors --runInBand --reporters=default --reporters=jest-junit --coverage --verbose"
   },
   "dependencies": {
-    "@monorepo-template/lib": "*",
+    "@rn-testing-class/lib": "*",
     "cors": "^2.8.5",
     "express": "^4.17.2",
     "nodemon": "^2.0.15",
