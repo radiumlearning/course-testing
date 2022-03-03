@@ -34,18 +34,24 @@ This repository holds the examples that will be used in all 3 RN Testing Lecture
 
 - First, checkout to the corresponding branch for the class you are taking
 
-
 Class 1 (clase-1/exercises)
+
 - Navigate to `packages/lib/utils/exercises`
 
+Class 2 (clase-2/exercises)
 
-Class 2 (clase-1/exercises)
-- TBD
+- Navigate to `packages/mobile/src/redux/modules/users/userReducers.test.ts`
+- Go to the end of the file & you should see an incomplete test for you to finish
+- Navigate to `packages/mobile/src/redux/modules/users/actions/exercises`
+- In that folder there should be two actions that are missing tests, go ahead and write them!
+- Navigate to `packages/mobile/src/redux/modules/todos`
+- This redux module has 0% of coverage. Add test to reducers, actions and selectors. Remember to add new handlers in `packages/mobile/src/mocks/handlers.ts` for the API calls!
 
+_Note: you can see the examples of class 2 if you feel lost_
 
 Class 3 (clase-1/exercises)
-- TBD
 
+- TBD
 
 ## Workflow
 
