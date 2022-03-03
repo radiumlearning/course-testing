@@ -2,6 +2,7 @@ import * as Utils from './index';
 
 describe('sum', () => {
   let warnSpy: jest.SpyInstance;
+
   beforeAll(() => {
     warnSpy = jest.spyOn(console, 'warn').mockImplementation(jest.fn());
   });
