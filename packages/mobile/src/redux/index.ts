@@ -8,11 +8,13 @@ import {
 
 import {throwMiddleware} from './middleware/throwMiddleware';
 import user from './modules/users/usersReducers';
+import todos from './modules/todos/todosReducers';
 
 export const resetStoreAction = createAction('auth/RESET_STORE');
 
 export const rootReducer = combineReducers({
   user,
+  todos,
 });
 
 export const rtkConfig = {
