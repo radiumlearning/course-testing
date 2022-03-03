@@ -88,5 +88,6 @@ describe('example reducers', () => {
     expect(secondState.currentUser.data).toEqual(Mocks.user);
   });
 
+  // TODO Exercise: add tests for this case
   it('handles loading user data failure', () => undefined);
 });
