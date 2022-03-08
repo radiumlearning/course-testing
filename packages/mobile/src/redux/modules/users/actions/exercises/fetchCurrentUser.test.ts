@@ -1,5 +1,3 @@
-import {server} from 'src/mocks/server';
-import {BASE_API_URL} from '@rn-testing-class/lib/config/mobile';
 import {getMockState, getMockStore} from 'src/test/utils';
 import * as Mocks from 'src/mocks';
 

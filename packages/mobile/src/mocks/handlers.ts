@@ -63,4 +63,12 @@ export const handlers = [
   rest.delete(`${BASE_API_URL}/users/:userId`, (_, res, ctx) => {
     return res(ctx.status(200), ctx.json({}));
   }),
+
+  rest.get(`${BASE_API_URL}/todos`, (_, res, ctx) =>
+    res(ctx.status(200), ctx.json(Mocks.todos)),
+  ),
+
+  rest.get(`${BASE_API_URL}/todos/:todoId`, (_, res, ctx) =>
+    res(ctx.status(200), ctx.json(Mocks.todo)),
+  ),
 ];
