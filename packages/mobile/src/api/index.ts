@@ -23,10 +23,12 @@ export type APIError<T = DefaultErrorResponse> = AxiosError<T>;
 export type APIResponse<T> = AxiosResponse<T>;
 export type APIPromise<T> = AxiosPromise<T>;
 
+/* istanbul ignore next */
 export const getAPIErrorCode = (error: APIError): ErrorCodes | undefined =>
   _get(error, 'response.data.error');
 
 // Cycles through the typical API error properties to find the message
+/* istanbul ignore next */
 export const getAPIErrorMessage = (error: APIError): string | undefined => {
   return _get(
     error,
@@ -53,6 +55,7 @@ export const get = <T = unknown>(
 /**
  * Fetch plain text from a URL
  */
+/* istanbul ignore next */
 export const getText = <T = string>(
   url: string,
   config?: AxiosRequestConfig,

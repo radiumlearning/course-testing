@@ -47,6 +47,7 @@ export const formatSSN = (value: string, previousValue: string): string => {
   } else if (['-'].includes(lastChar)) {
     return currentValue.slice(0, -1);
   } else if (lastChar === ' ') {
+    /* istanbul ignore next */
     return currentValue.slice(0, -2);
   }
 
