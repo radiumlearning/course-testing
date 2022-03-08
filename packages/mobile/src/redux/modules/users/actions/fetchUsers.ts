@@ -12,7 +12,7 @@ export const fetchUsersAction = createAsyncThunk<
 >(
   'users/FETCH_USERS',
   async () => {
-    const res = await API.getExample();
+    const res = await API.getUsers();
     return res.data;
   },
   {

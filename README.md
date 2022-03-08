@@ -49,7 +49,7 @@ Class 2 (clase-2/exercises)
 
 _Note: you can see the examples of class 2 if you feel lost_
 
-Class 3 (clase-1/exercises)
+Class 3 (clase-3/exercises)
 
 - TBD
 

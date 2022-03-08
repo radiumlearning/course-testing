@@ -2,7 +2,6 @@ import {createAsyncThunk} from '@reduxjs/toolkit';
 import {User} from '@rn-testing-class/lib/interfaces';
 import {AppDispatch, RootState} from '../../../..';
 import * as API from '../../api';
-import {getCurrentUser} from '../../api';
 
 export const fetchCurrentUserAction = createAsyncThunk<
   User,

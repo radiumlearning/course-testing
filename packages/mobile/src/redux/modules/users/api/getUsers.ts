@@ -3,4 +3,4 @@ import {User} from '@rn-testing-class/lib/interfaces';
 
 export type GetUsersOutput = User[];
 
-export const getExample = (): APIPromise<GetUsersOutput> => get(`/users`);
+export const getUsers = (): APIPromise<GetUsersOutput> => get(`/users`);

@@ -9,7 +9,9 @@ export const fetchCurrentTodoAction = createAsyncThunk<
   {state: RootState; dispatch: AppDispatch}
 >('todos/FETCH_CURRENT_TODO', async (input, {getState}) => {
   if (input) {
-    const todoId = getState().user.data.find(user => user.id === input?.todoId);
+    const todoId = getState().todos.data.find(
+      todo => todo.id === input?.todoId,
+    );
 
     if (!todoId) {
       throw new Error('Unable to match todoId with existing todo');
