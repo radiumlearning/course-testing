@@ -12,13 +12,13 @@ const Example = () => {
 
   React.useEffect(() => {
     dispatch(fetchUsersAction());
-  });
+  }, []);
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
-
+  console.log('isFetching: ', isFetching);
   return (
     <SafeAreaView style={backgroundStyle}>
       <Text>Users: {isFetching ? 'Fetching...' : data.length}</Text>

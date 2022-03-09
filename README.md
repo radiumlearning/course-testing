@@ -43,15 +43,19 @@ Class 2 (clase-2/exercises)
 - Navigate to `packages/mobile/src/redux/modules/users/userReducers.test.ts`
 - Go to the end of the file & you should see an incomplete test for you to finish
 - Navigate to `packages/mobile/src/redux/modules/users/actions/exercises`
-- In that folder there should be two actions that are missing tests, go ahead and write them!
+- In that folder are two actions that have missing tests, go ahead and write them!
 - Navigate to `packages/mobile/src/redux/modules/todos`
 - This redux module has 0% of coverage. Add test to reducers, actions and selectors. Remember to add new handlers in `packages/mobile/src/mocks/handlers.ts` for the API calls!
 
 _Note: you can see the examples of class 2 if you feel lost_
 
-Class 3 (clase-3/exercises)
+Class 3 (main)
 
-- TBD
+- Navigate to `packages/mobile/src/components/UserList/UserList.test.tsx`
+- This component have 3 missing tests, go ahead and write them!
+
+_Note: you can see more examples about how to check if an action have_
+_been called at the first render here `packages/mobile/src/components/Example/Example.test.tsx`_
 
 ## Workflow
 
