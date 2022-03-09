@@ -1,93 +1,64 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Provider} from 'react-redux';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
+import {SafeAreaView, Text, View, Button, TextInput} from 'react-native';
+import Toast from 'react-native-simple-toast';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-
-import {Button} from '@rn-testing-class/lib/components/button';
 import {getStore} from './redux';
-import styles from './App.styles';
-import Example from './components/Example';
+import UserList from './components/UserList/UserList';
 
-const Section: React.FC<{
-  title: string;
-}> = ({children, title}) => {
-  const isDarkMode = useColorScheme() === 'dark';
-
-  return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
-      <Button>Button From Lib</Button>
-    </View>
-  );
+type Props = {
+  showHiddenText?: boolean;
 };
 
-const App = () => {
-  const isDarkMode = useColorScheme() === 'dark';
+const App: React.FC<Props> = ({showHiddenText = true}) => {
+  const [state, setstate] = useState<boolean>(false);
+  const [value, setValue] = useState<string>('');
 
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+  const showToast = () => {
+    Toast.show('Toast Message');
+  };
+
+  const onChangeText = (eventValue: string) => {
+    setValue(eventValue);
   };
 
   return (
     <Provider store={getStore()}>
-      <SafeAreaView style={backgroundStyle}>
-        <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-        <Example />
-        <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-          style={backgroundStyle}>
-          <Header />
-          <View
-            style={{
-              backgroundColor: isDarkMode ? Colors.black : Colors.white,
-            }}>
-            <Section title="Step One">
-              Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-              screen and then come back to see your edits.
-            </Section>
-            <Section title="See Your Changes">
-              <ReloadInstructions />
-            </Section>
-            <Section title="Debug">
-              <DebugInstructions />
-            </Section>
-            <Section title="Learn More">
-              Read the docs to discover what to do next:
-            </Section>
-            <LearnMoreLinks />
-          </View>
-        </ScrollView>
+      <SafeAreaView>
+        <View
+          style={{
+            height: '100%',
+            paddingHorizontal: 20,
+            justifyContent: 'center',
+          }}>
+          <Button onPress={() => setstate(!state)} title="Show Text" />
+
+          {state && <Text style={{fontSize: 24, marginTop: 20}}>Hi!</Text>}
+
+          <Button onPress={showToast} title="Show Toast" />
+
+          <Text testID="textExample" style={{fontSize: 24, marginTop: 20}}>
+            Hi!
+          </Text>
+
+          <Text style={{fontSize: 24, marginTop: 20}}>Example Text</Text>
+          <Text style={{fontSize: 24, marginTop: 20}}>Example Text</Text>
+
+          {showHiddenText && (
+            <Text testID="hiddenText" style={{fontSize: 24, marginTop: 20}}>
+              Hidden Text
+            </Text>
+          )}
+
+          <TextInput
+            testID="inputExample"
+            onChangeText={event => onChangeText(event)}
+            placeholder="Placeholder text"
+            value={value}
+            style={{borderWidth: 1, padding: 10, marginVertical: 10}}
+          />
+          <UserList />
+        </View>
       </SafeAreaView>
     </Provider>
   );
