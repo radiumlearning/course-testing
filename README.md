@@ -34,12 +34,24 @@ This repository holds the examples that will be used in all 3 RN Testing Lecture
 
 - First, checkout to the corresponding branch for the class you are taking
 
-Class 1 (clase-1/exercises)
+**Class 1**
 
+You can find all we given during the class in the following path of the project:
+`packages/lib/utils/demo`
+
+Exercises:
+
+Branch: `clase-1/exercises`
 - Navigate to `packages/lib/utils/exercises`
 
-Class 2 (clase-2/exercises)
+**Class 2**
 
+You can find all we given during the class in the following path of the project:
+`packages/mobile/src/redux/modules/users`
+
+Exercises:
+
+Branch: `clase-2/exercises`
 - Navigate to `packages/mobile/src/redux/modules/users/userReducers.test.ts`
 - Go to the end of the file & you should see an incomplete test for you to finish
 - Navigate to `packages/mobile/src/redux/modules/users/actions/exercises`
@@ -49,8 +61,14 @@ Class 2 (clase-2/exercises)
 
 _Note: you can see the examples of class 2 if you feel lost_
 
-Class 3 (main)
+**Class 3**
 
+You can find all we given during the class in the following path of the project:
+`packages/mobile/src/components`
+
+Exercises:
+
+Branch: `main`
 - Navigate to `packages/mobile/src/components/UserList/UserList.test.tsx`
 - This component have 3 missing tests, go ahead and write them!
 
